@@ -1,17 +1,21 @@
+//creates variable for the number of times the program executes.
+let number = 0;
+
 //checks if an argument was passed into the cli program
 if (process.argv[2] === undefined) {
-    console.log('Usage: node script.js [integer]');
-    return 1;
+    number = 1;
+} else {
+    //transforms the number passed into an integer
+    number = parseInt(process.argv[2]);
+
+    //checks if the number after conversion is actually an integer and not NaN
+    if (isNaN(number)) {
+        console.log('Usage node script.js [integer]');
+        return 1; 
+    }
 }
 
-//transforms the number passed into an integer
-let number = parseInt(process.argv[2]);
-
-//checks if the number was actually an integer
-if (isNaN(number)) {
-    console.log('Usage node script.js [integer]');
-    return 1; 
-}
+//array declaration for verbs, nouns, and the opening statements.
 const verbs = ['adapt','agree','apologize','belong','consent','devote','happen','lead','listen','object','react','refer','reply','speak','talk','turn', 'admire', 'apologize','apply','ask','blame','care','excuse','head','long','pay','pray','prepare','scold','search','vote','wait','wish','work','abstain','borrow','escape','graduate','hide','infer','prevent','prohibit','protect','recover','rescue','resign','retire','save','separate','stem','suffer','agree','base','be','blame','comment','concentrate','congratulate','count','depend','elaborate','impose','insist','play','pride','rely','work', 'aim','arrive','glance','guess','hint','laugh','look','marvel','peer','point','smile','stare','wink', 'argue','ask','be','boast','care','concern','decide','dream','forget','know','laugh','protest','think','worry' ]; //add verbs here
 const nouns = ['leg','science','stick','cart','brass','respect','dinosaurs','passenger','playground','teeth','knee','squirrel','eye','chess','beginner','stew','dock','coat','skirt','brake','orange','songs','soda','floor','holiday','thunder','battle','rake','look','pollution','pump','station','scarecrow','partner','fork','stomach','drop','steel','observation','blow','smoke','balance','oranges','back','snail','current','increase','purpose','desk','ducks','window','quiver','cream','laborer','day','cat','monkey','corn','spoon','mint','account','art','quartz','representative','meeting','foot','air','border','wire','afternoon','van','cent','finger','mother','mark','price','office','turkey','insect','order','view','harbor','note','car','fly','toothbrush','spy','cable','wave','history','town','toothpaste','bite','arm','bird','quilt','effect','home','shock','person']; //add nouns here
 const opener = ['You should', 'The stars are telling me','I get a feeling you should','Your mom told me to to tell you should'];
