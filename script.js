@@ -29,9 +29,9 @@ while (i < number) {
 
 function randomMessageCreator() {
     //generates a random number for the index of the verb and noun thats going to be selected.
-    let verbNumber = Math.floor(Math.random() * verbs.length - 1);
-    let nounNumber = Math.floor(Math.random() * nouns.length - 1);
-    let openerNumber = Math.floor(Math.random() * opener.length - 1);
+    let verbNumber = Math.floor(Math.random() * verbs.length);
+    let nounNumber = Math.floor(Math.random() * nouns.length);
+    let openerNumber = Math.floor(Math.random() * opener.length);
     let prepositionUsed = '';
     //checks the index of the verb selected and then selects the appropiate preposition
     // 
