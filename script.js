@@ -19,7 +19,7 @@ if (isNaN(number)) {
     console.log('Usage node script.js [integer]');
     return 1; 
 }
-const verbs = [ ] //add verbs here
+const verbs = ['adapt','agree','apologize','belong','consent','devote','happen','lead','listen','object','react','refer','reply','speak','talk','turn', 'admire', 'apologize','apply','ask','blame','care','excuse','head','long','pay','pray','prepare','scold','search','vote','wait','wish','work','abstain','borrow','escape','graduate','hide','infer','prevent','prohibit','protect','recover','rescue','resign','retire','save','separate','stem','suffer','agree','base','be','blame','comment','concentrate','congratulate','count','depend','elaborate','impose','insist','play','pride','rely','work', 'aim','arrive','glance','guess','hint','laugh','look','marvel','peer','point','smile','stare','wink', 'argue','ask','be','boast','care','concern','decide','dream','forget','know','laugh','protest','think','worry' ] //add verbs here
 const prepositions = [ ] //add prepositions here
 const nouns = [ ] //add nouns here
 
@@ -38,7 +38,8 @@ function randomMessageCreator() {
     //generates a random number for the index of the verb and noun thats going to be selected.
     let verbNumber = Math.floor(Math.random() * verbs.length - 1);
     let nounNumber = Math.floor(Math.random() * nouns.length - 1);
-
+    let prepositionUsed = '';
     //checks the index of the verb selected and then selects the appropiate preposition
+    //0 - 16 preposition = to 17 - 35 preposition = for 36 - 53 preposition = from 54 - 70 preposition = on 71 - 84 preposition = at 85 - 102 preposition about
 
 }
