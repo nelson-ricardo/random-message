@@ -1,26 +1,21 @@
-# The Goals of the Random Message Generator Project:
+# Random Message Generator
 
-1. -[ ] First is to build a random message generator
-2. -[ ] Use version control to manage the project
-3. -[ ] Use the command line
-4. -[ ] Develop Locally in my own computer.
+This is a portfolio project that CodeCademy proposes after the Sections of Javascript I and II and Git and Github.
+The goal of the project is to generate random messages with an array of verbs, nouns, and some ways to begin the sentence.
 
-## Planning the Project itself.
+The format of the sentences is: "(Opening): (verb) (preposition) (noun)".
 
-I can add whatever what I want.
-How will my program work...
+## Usage
+This is a node command line program, it needs one argument with it, an integer, between 1 and N where N is a big number.
+The way to call the program is the next one:
+```bash 
+    node path/to/script.js number (1-n)
+```
 
-### Random Message
-A sentence is composed of 2 parts, a subject and a predicate
-inside of the predicate we have the object of the sentence.
-So we can divide a sentence in 3 parts, subject, verb, object.
+The program only accepts numbers and not strings that make a number (for example ten), if that happens the program stops.
 
-I want really just random messages, it will not have an specific topic
-It will follow the standard english sentence formation. Meaning subject, verb, object
-The subject will be things, verb will be a verb, object will be another object.
+If no argument was provided then it is set to just one time.
 
-I could use three arrays one for subject, one for verbs, one for predicates. 
-The Random Message Generator will follow the convention of You should: " verb a/with object/animal"
-
-# Install Jonathan theme in the zsh
-That is a task that I have to do on my own and it is not part of the project but I really liked how it looked so Imma install it.
+## Problems
+It uses a huge array (100 elements) and it is hard-coded into the program, so it is random but constraint for the amounts
+of elements that is inside of the array(s).
