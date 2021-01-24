@@ -1,10 +1,8 @@
-// The script will generate a random message, that is going to pick up the words from a B I G array of words
+
 //Changes, verb, preposition, noun.
 /* An array for verbs depending on the index of the verb array, choose the preposition, and then the object
 The sentence should follow the You Should: " verb preposition noun"
 */
-
-//add a control to check for arguments which will be only one, and it takes in a number 1 to n.
 
 
 //checks if an argument was passed into the cli program
@@ -24,3 +22,23 @@ if (isNaN(number)) {
 const verbs = [ ] //add verbs here
 const prepositions = [ ] //add prepositions here
 const nouns = [ ] //add nouns here
+
+//while loop that will create messages as long as we don't reach the number argument
+let i = 1;
+while (i < number) {
+    //function that creates random messages
+    console.log(randomMessageCreator());
+    i++
+}
+
+//The function should select one word from each array.
+//The form of the sentence will be You should: "verb preposition noun".
+
+function randomMessageCreator() {
+    //generates a random number for the index of the verb and noun thats going to be selected.
+    let verbNumber = Math.floor(Math.random() * verbs.length - 1);
+    let nounNumber = Math.floor(Math.random() * nouns.length - 1);
+
+    //checks the index of the verb selected and then selects the appropiate preposition
+
+}
