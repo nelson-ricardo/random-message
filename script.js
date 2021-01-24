@@ -40,6 +40,19 @@ function randomMessageCreator() {
     let nounNumber = Math.floor(Math.random() * nouns.length - 1);
     let prepositionUsed = '';
     //checks the index of the verb selected and then selects the appropiate preposition
-    //0 - 16 preposition = to 17 - 35 preposition = for 36 - 53 preposition = from 54 - 70 preposition = on 71 - 84 preposition = at 85 - 102 preposition about
-
+    // 
+    if(verbNumber <= 16) {
+        prepositionUsed = 'to';
+    } else if(verbNumber <= 35) {
+        prepositionUsed = 'for';
+    } else if(verbNumber <= 53) {
+        prepositionUsed = 'from';
+    } else if(verbNumber <= 70) {
+        prepositionUsed = 'on';
+    } else if(verbNumber <= 84) {
+        prepositionUsed = 'at';
+    } else if (verbNumber <= 102) {
+        prepositionUsed = 'about';
+    }
+    return prepositionUsed;
 }
