@@ -1,10 +1,3 @@
-
-//Changes, verb, preposition, noun.
-/* An array for verbs depending on the index of the verb array, choose the preposition, and then the object
-The sentence should follow the You Should: " verb preposition noun"
-*/
-
-
 //checks if an argument was passed into the cli program
 if (process.argv[2] === undefined) {
     console.log('Usage: node script.js [integer]');
@@ -21,7 +14,7 @@ if (isNaN(number)) {
 }
 const verbs = ['adapt','agree','apologize','belong','consent','devote','happen','lead','listen','object','react','refer','reply','speak','talk','turn', 'admire', 'apologize','apply','ask','blame','care','excuse','head','long','pay','pray','prepare','scold','search','vote','wait','wish','work','abstain','borrow','escape','graduate','hide','infer','prevent','prohibit','protect','recover','rescue','resign','retire','save','separate','stem','suffer','agree','base','be','blame','comment','concentrate','congratulate','count','depend','elaborate','impose','insist','play','pride','rely','work', 'aim','arrive','glance','guess','hint','laugh','look','marvel','peer','point','smile','stare','wink', 'argue','ask','be','boast','care','concern','decide','dream','forget','know','laugh','protest','think','worry' ]; //add verbs here
 const nouns = ['leg','science','stick','cart','brass','respect','dinosaurs','passenger','playground','teeth','knee','squirrel','eye','chess','beginner','stew','dock','coat','skirt','brake','orange','songs','soda','floor','holiday','thunder','battle','rake','look','pollution','pump','station','scarecrow','partner','fork','stomach','drop','steel','observation','blow','smoke','balance','oranges','back','snail','current','increase','purpose','desk','ducks','window','quiver','cream','laborer','day','cat','monkey','corn','spoon','mint','account','art','quartz','representative','meeting','foot','air','border','wire','afternoon','van','cent','finger','mother','mark','price','office','turkey','insect','order','view','harbor','note','car','fly','toothbrush','spy','cable','wave','history','town','toothpaste','bite','arm','bird','quilt','effect','home','shock','person']; //add nouns here
-const opener = ['You should:', 'The stars are telling me:','I get a feeling you should:','Your mom told me to to tell you should:'];
+const opener = ['You should', 'The stars are telling me','I get a feeling you should','Your mom told me to to tell you should'];
 
 //while loop that will create messages as long as we don't reach the number argument
 let i = 0;
@@ -38,6 +31,7 @@ function randomMessageCreator() {
     //generates a random number for the index of the verb and noun thats going to be selected.
     let verbNumber = Math.floor(Math.random() * verbs.length - 1);
     let nounNumber = Math.floor(Math.random() * nouns.length - 1);
+    let openerNumber = Math.floor(Math.random() * opener.length - 1);
     let prepositionUsed = '';
     //checks the index of the verb selected and then selects the appropiate preposition
     // 
@@ -54,5 +48,6 @@ function randomMessageCreator() {
     } else if (verbNumber <= 102) {
         prepositionUsed = 'about';
     }
-    return prepositionUsed;
+    let sentence = `${opener[openerNumber]}: ${verbs[verbNumber]} ${prepositionUsed} ${nouns[nounNumber]}`;
+    return sentence;
 }
