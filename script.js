@@ -24,7 +24,7 @@ const prepositions = [ ] //add prepositions here
 const nouns = [ ] //add nouns here
 
 //while loop that will create messages as long as we don't reach the number argument
-let i = 1;
+let i = 0;
 while (i < number) {
     //function that creates random messages
     console.log(randomMessageCreator());
